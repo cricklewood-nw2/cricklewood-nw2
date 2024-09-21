@@ -24,7 +24,7 @@
 </head>
 <body>
 
-  <!-- AMP Analytics タグ -->
+  <!-- Google Tag Manager (AMP) -->
   <amp-analytics 
     config="https://www.googletagmanager.com/amp.json?id=GTM-WWBXFB3&amp;gtm.url=SOURCE_URL" 
     data-credentials="include" 
@@ -35,7 +35,7 @@
     hidden="">
   </amp-analytics>
 
-  <!-- AMP Analytics タグ -->
+  <!-- GA4のページビューとイベントのトラッキング用AMP Analyticsタグ -->
   <amp-analytics type="gtag" data-credentials="include" 
     class="i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-element i-amphtml-built i-amphtml-layout" 
     style="width:1px;height:1px;" i-amphtml-layout="fixed" aria-hidden="true" hidden="">
@@ -49,12 +49,18 @@
               "send_page_view": true
             }
           }
+        },
+        "triggers": {
+          "pageview": {
+            "on": "visible",
+            "request": "pageview"
+          }
         }
       }
     </script>
   </amp-analytics>
 
-  <!-- AMP Analytics タグ (Google Analytics) -->
+  <!-- GA4用のイベントトラッキング設定 -->
   <amp-analytics type="googleanalytics" 
     config="https://amp.analytics-debugger.com/ga4.json" 
     data-credentials="include" 
@@ -68,8 +74,7 @@
           "gtag_id": "G-7DKM61RJVG",
           "config": {
             "G-7DKM61RJVG": {
-              "groups": "default",
-              "send_page_view": true
+              "groups": "default"
             }
           }
         },
@@ -88,14 +93,6 @@
             "request": "event",
             "vars": {
               "event_name": "rakuten_click"
-            }
-          },
-          "ebten": {
-            "selector": ".buttonForECEbten",
-            "on": "click",
-            "request": "event",
-            "vars": {
-              "event_name": "ebten_click"
             }
           }
         }
