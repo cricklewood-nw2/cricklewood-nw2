@@ -1,12 +1,67 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!doctype html>
+<html ⚡>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <link rel="canonical" href="self.html">
+  <title>AMPテストページ</title>
+  <style amp-custom>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .buttonLink {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+  </style>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 </head>
 <body>
-  <h1>こんにちは、GitHub Pages！</h1>
-  <p>これは私の最初の静的ウェブページです。</p>
+  <h1>AMPページのテスト</h1>
+  <p>このページではAMPタグのテストが可能です。</p>
+
+  <!-- Amazonリンク -->
+  <a target="_blank" rel="noopener noreferrer" class="buttonLink buttonForECAmazon" href="https://www.amazon.co.jp/dp/B0DDPLWGWQ?tag=famitsu-5-22">Amazonリンク</a>
+
+  <!-- 楽天リンク -->
+  <a target="_blank" rel="noopener noreferrer" class="buttonLink buttonForECRakuten" href="https://books.rakuten.co.jp/rb/17272218/">楽天リンク</a>
+
+  <!-- AMP Analytics タグ -->
+  <amp-analytics type="gtag" data-credentials="include">
+    <script type="application/json">
+      {
+        "vars": {
+          "gtag_id": "G-1NE4J0SQ4K",
+          "config": {
+            "G-1NE4J0SQ4K": { "groups": "default", "send_page_view": true }
+          }
+        },
+        "triggers": {
+          "amazon": {
+            "selector": ".buttonForECAmazon",
+            "on": "click",
+            "request": "event",
+            "vars": {
+              "event_name": "amazon_click"
+            }
+          },
+          "rakuten": {
+            "selector": ".buttonForECRakuten",
+            "on": "click",
+            "request": "event",
+            "vars": {
+              "event_name": "rakuten_click"
+            }
+          }
+        }
+      }
+    </script>
+  </amp-analytics>
+
 </body>
 </html>
