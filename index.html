@@ -5,6 +5,48 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <link rel="canonical" href="self.html">
   <title>AMPテストページ</title>
+
+  <!-- 正しいAMP Boilerplate -->
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+    }
+    @-webkit-keyframes -amp-start {
+      from {visibility: hidden;}
+      to {visibility: visible;}
+    }
+    @-moz-keyframes -amp-start {
+      from {visibility: hidden;}
+      to {visibility: visible;}
+    }
+    @-ms-keyframes -amp-start {
+      from {visibility: hidden;}
+      to {visibility: visible;}
+    }
+    @keyframes -amp-start {
+      from {visibility: hidden;}
+      to {visibility: visible;}
+    }
+  </style>
+  <noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none;
+      }
+    </style>
+  </noscript>
+
+  <!-- AMPスクリプトの読み込み -->
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+  <!-- カスタムスタイル -->
   <style amp-custom>
     body {
       font-family: Arial, sans-serif;
@@ -19,15 +61,16 @@
       border-radius: 4px;
     }
   </style>
-  <script async src="https://cdn.ampproject.org/v0.js"></script>
-  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 </head>
 <body>
 
   <!-- AMP Analytics タグ -->
-  <amp-analytics type="gtag" data-credentials="include" 
-    class="i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-element i-amphtml-built i-amphtml-layout" 
-    style="width:1px;height:1px;" i-amphtml-layout="fixed" aria-hidden="true" hidden="true">
+  <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-WWBXFB3&amp;gtm.url=SOURCE_URL" 
+    data-credentials="include" hidden>
+  </amp-analytics>
+
+  <!-- AMP Analytics タグ (gtagでのGA4計測) -->
+  <amp-analytics type="gtag" data-credentials="include" hidden>
     <script type="application/json">
       {
         "vars": {
@@ -69,22 +112,16 @@
   <p>このページではAMPタグのテストが可能です。</p>
 
   <!-- Amazonリンク -->
-  <div class="">
+  <div>
     <a target="_blank" rel="noopener noreferrer" class="buttonLink buttonForECAmazon" href="https://www.amazon.co.jp/dp/B0DDPLWGWQ?tag=famitsu-5-22">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="white">
-        <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z"></path>
-      </svg>
       NACON REVOLUTION 5 PRO コントローラー（新色）関連商品の購入はこちら（Amazon）
     </a>
   </div>
   <br>
 
   <!-- 楽天リンク -->
-  <div class="">
+  <div>
     <a target="_blank" rel="noopener noreferrer" class="buttonLink buttonForECRakuten" href="https://hb.afl.rakuten.co.jp/hgc/3d481303.1f3ba8a5.3d481304.53152ad8/?pc=https://books.rakuten.co.jp/search?sitem=NACON+REVOLUTION+5+PRO+%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC">
-      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="white">
-        <path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM208-800h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Z"></path>
-      </svg>
       NACON REVOLUTION 5 PRO コントローラー関連商品の購入はこちら（Rakuten）
     </a>
   </div>
