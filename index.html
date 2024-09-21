@@ -24,21 +24,10 @@
 </head>
 <body>
 
-  <!-- Google Tag Manager (AMP) -->
-  <amp-analytics 
-    config="https://www.googletagmanager.com/amp.json?id=GTM-WWBXFB3&amp;gtm.url=SOURCE_URL" 
-    data-credentials="include" 
-    class="i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-element i-amphtml-built i-amphtml-layout" 
-    style="width:1px;height:1px;" 
-    i-amphtml-layout="fixed" 
-    aria-hidden="true" 
-    hidden="">
-  </amp-analytics>
-
-  <!-- GA4のページビューとイベントのトラッキング用AMP Analyticsタグ -->
+  <!-- AMP Analytics タグ -->
   <amp-analytics type="gtag" data-credentials="include" 
     class="i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-element i-amphtml-built i-amphtml-layout" 
-    style="width:1px;height:1px;" i-amphtml-layout="fixed" aria-hidden="true" hidden="">
+    style="width:1px;height:1px;" i-amphtml-layout="fixed" aria-hidden="true" hidden="true">
     <script type="application/json">
       {
         "vars": {
@@ -51,34 +40,10 @@
           }
         },
         "triggers": {
-          "pageview": {
+          "trackPageview": {
             "on": "visible",
             "request": "pageview"
-          }
-        }
-      }
-    </script>
-  </amp-analytics>
-
-  <!-- GA4用のイベントトラッキング設定 -->
-  <amp-analytics type="googleanalytics" 
-    config="https://amp.analytics-debugger.com/ga4.json" 
-    data-credentials="include" 
-    class="i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-element i-amphtml-built i-amphtml-layout" 
-    style="width:1px;height:1px;" 
-    i-amphtml-layout="fixed" 
-    aria-hidden="true" hidden="">
-    <script type="application/json">
-      {
-        "vars": {
-          "gtag_id": "G-7DKM61RJVG",
-          "config": {
-            "G-7DKM61RJVG": {
-              "groups": "default"
-            }
-          }
-        },
-        "triggers": {
+          },
           "amazon": {
             "selector": ".buttonForECAmazon",
             "on": "click",
