@@ -14,29 +14,20 @@
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   </head>
   <body>
-    <!-- Configure analytics to use gtag -->
-    <amp-analytics type="gtag" data-credentials="include">
-      <script type="application/json">
-        {
-          "vars": {
-            "gtag_id": "G-7DKM61RJVG",
-            "config": {
-              "G-7DKM61RJVG": {}
-            }
-          },
-          "triggers": {
-            "button": {
-              "selector": "#the-button",
-              "on": "click",
-              "vars": {
-                "event_name": "login",
-                "method": "Google"
-              }
-            }
-          }
-        }
-      </script>
-    </amp-analytics>
+
+<!-- Configure analytics to use gtag -->
+<amp-analytics type="gtag" data-credentials="include">
+<script type="application/json">
+{
+  "vars" : {
+    "gtag_id": "G-7DKM61RJVG",
+    "config" : {
+      "G-7DKM61RJVG": { "groups": "default" }
+    }
+  }
+}
+</script>
+</amp-analytics>
 
     <h1>Welcome to the mobile web</h1>
     <div>
