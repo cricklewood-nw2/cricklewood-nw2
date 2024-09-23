@@ -1,55 +1,46 @@
 <!doctype html>
-<html ⚡>
-<head>
-	<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-<amp-analytics type="gtag" data-credentials="include">
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="self.html" />
+    <title>AMP gtag demo</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
-	
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  <link rel="canonical" href="self.html">
-  <title>AMPテストページ</title>
-  <style amp-custom>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .buttonLink {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-  </style>
-  <script async src="https://cdn.ampproject.org/v0.js"></script>
-  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <!-- Load AMP -->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
 
-<!-- AMP Analytics --><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-</head>
-<body>
-<script type="application/json">
-{
-  "vars" : {
-    "gtag_id":"G-7DKM61RJVG",
-    "config" : {
-    "G-7DKM61RJVG": { "groups": "default" }
-    }
-  }
-}
-</script>
-</amp-analytics>
+    <!-- Load amp-analytics -->
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  </head>
+  <body>
+    <!-- Configure analytics to use gtag -->
+    <amp-analytics type="gtag" data-credentials="include">
+      <script type="application/json">
+        {
+          "vars": {
+            "gtag_id": "G-7DKM61RJVG",
+            "config": {
+              "G-7DKM61RJVG": {}
+            }
+          },
+          "triggers": {
+            "button": {
+              "selector": "#the-button",
+              "on": "click",
+              "vars": {
+                "event_name": "login",
+                "method": "Google"
+              }
+            }
+          }
+        }
+      </script>
+    </amp-analytics>
 
-  <h1>AMPページのテスト</h1>
-  <p>このページではAMPタグのテストが可能です。</p>
-
-  <!-- Amazonリンク -->
-  <a target="_blank" rel="noopener noreferrer" class="buttonLink buttonForECAmazon" href="https://www.amazon.co.jp/dp/B0DDPLWGWQ?tag=famitsu-5-22">Amazonリンク</a>
-
-  <!-- 楽天リンク -->
-  <a target="_blank" rel="noopener noreferrer" class="buttonLink buttonForECRakuten" href="https://books.rakuten.co.jp/rb/17272218/">楽天リンク</a>
-
-
-
-</body>
+    <h1>Welcome to the mobile web</h1>
+    <div>
+      <button type="button" id="the-button">Example: Log in with Google</button>
+    </div>
+  </body>
 </html>
